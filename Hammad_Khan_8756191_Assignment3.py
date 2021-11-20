@@ -10,14 +10,6 @@ print("We offer a wide range of colors for our shirts starting at $9.99 each! Pl
 
 print("")
 
-print("After that, select the type of shirt you would like. We offer two types of shirts, polo or t-shirt.")
-
-print("")
-
-print("Lastly, enter in the amount of shirts you would like.")
-
-print("")
-
 class Shirts(object):
     def __init__(self, colorinput, typeinput, numinput):
         self.colorinput = colorinput
@@ -33,12 +25,17 @@ class Shirts(object):
     def getNumIn(numinput):
         print("You want:", numinput, "shirt(s).")
 
-
 colorinput = (input("What color shirt would you like?: "))
 result1 = Shirts.getColorIn(colorinput)
 
+print("")
+
+print("Next, select the type of shirt you would like. We offer two types of shirts, polo or t-shirt.")
+
 typeinput = (input("What type of shirt would you like?: "))
 result2 = Shirts.getTypeIn(typeinput)
+
+print("")
 
 numinput = int(input("Lastly, decide how many shirts you would like!: "))
 result3 = Shirts.getNumIn(numinput)
@@ -47,45 +44,37 @@ print("")
 
 print("We are excited to announce that we are now selling hoodies starting at $14.99 each! Please enter in the color hoodie you want!")
 
-def colorIn2():
-
-    global colorinput2
-    colorinput2 = int(input("What color hoodie would you like?: "))
-
-    while 7 < colorinput2 < 11:
-        print("Great choice! ")
-        break
-
-    else:
-        print("Oops! The color you want is not in stock  :(  Please select between 8-10")
-        colorIn2()
-
-colorIn2()
-
 print("")
 
-print("Next, select the type of hoodie would you would like. We offer two types of hoodies. Please enter in the number that corresponds with the one you want!")
-print("Zip-Up = 11")
-print("Pullover = 12")
+class Hoodies(object):
+    def __init__(self, colorinput2, typeinput2, numinput2):
+        self.colorinput2 = colorinput2
+        self.typeinput2 = typeinput2
+        self.numinput2 = numinput2
 
-def typeIn2():
+    def getColorIn2(colorinput2):
+        print("You chose a", colorinput2, "hoodie. Great choice!")
 
-    global typeinput2
-    typeinput2 = int(input("Please select the type of hoodie would you like!: "))
+    def getTypeIn2(typeinput2):
+        print("You chose a", typeinput2, "hoodie. Great choice!")
+    
+    def getNumIn2(numinput2):
+        print("You want:", numinput2, "hoodie(s).")
 
-    while 10 < typeinput2 < 13:
-        print("Great choice!")
-        break
+colorinput2 = (input("What color hoodie would you like?: "))
+result4 = Hoodies.getColorIn2(colorinput2)
 
-    else:
-        print("Looks like we are all out of that type of hoodie...  Please select between 11-12")
-        typeIn2()
+print("") 
 
-typeIn2()
+print("Next, select the type of hoodie you would like. We offer two types of hoodies, pullover or zip-up.")
+
+typeinput2 = (input("What type of hoodie would you like?: "))
+result5 = Hoodies.getTypeIn2(typeinput2)
 
 print("")
 
 numinput2 = int(input("Lastly, decide how many hoodies you would like!: "))
+result6 = Hoodies.getNumIn2(numinput2)
 
 print("")
 
